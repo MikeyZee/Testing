@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <title>Field Day</title>
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/fullcalendar.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+  <link href="css/line-icons.css" rel="stylesheet">
+  <link href="css/elegant-icons-style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.html" class="logo">Field <span class="lite">Day</span></a>
+      <!--logo end-->
+      <div>
+        <img class="logo_header" src="img/FD.png">
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="">
+            <a class="" href="index.html">
+              <i class="icon_house_alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a class= "" href="Altitude.html">
+              <i class=""></i>
+              <span>Altitude</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class="" href="Speed.html">
+              <img src="img/Speedometer icon.png" border="0"width="26px" height="26px" > 
+              <span>Speed</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a href="GPS.html">
+              <i class="icon_genius"></i>
+              <span>GPS</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class="" href="Acceleration.html">
+              <i class="icon_piechart"></i>
+              <span>Acceleration</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a href="Gyro.html">
+               <i class="icon_table"></i>
+               <span>Gyro</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a href="FieldDay_Info.html" class="">
+              <i class="icon_documents_alt"></i>
+              <span>FieldDay Explained</span>
+            </a>
+          </li>
+
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-laptop"></i> Altitude </h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-laptop"></i>Altitude</li>
+            </ol>
+          </div>
+        </div>
+
+      <div id="Altitudeinput">
+           
+        Altitudes (comma delimited): <div class="popup" onclick="OnlineHelp1()">Help!
+            <span class="popuptext" id="myPopup">Enter the altitude values found in your decoded flight log file in the textbox below</span>
+          </div>  <br>
+        <textarea rows = "5" cols = "50" id = "altitudes" placeholder="Enter altitudes"></textarea>
+
+       <!-- <input id="altitudelog"  style=position:relative;top:30%;left:1%;width:10%;  type="text" id="altitudelog" placeholder="paste altitude logs here">
+        <input id="iterationlog" style=position:relative;top:30%;left:40%;width:10%; type="text" id="altitudelog" placeholder="paste iteration logs here">-->
+      </div>
+      <div id="Frequencyinput">
+          Logging Frequency (number of samples taken per second): <br>
+          <select id="frequency" >
+              <option value="1">1Hz (TESTING ONLY)</option>
+              <option value="500">500Hz</option>
+              <option value="1000" selected="selected">1kHz</option>
+              <option value="2000">2kHz</option>
+            </select> 
+            <div class="popup" onclick="OnlineHelp2()">Help!
+                <span class="popuptext" id="myPopup2">Find this within your betaflight blackbox settings - 1kHz = 1000 logs per second</span>
+      </div>
+      <br>
+      <button onclick="Generatechart()">Generate Graph!</button>
+      <div class="parent">
+        <div class="canvas-wrap">
+          <canvas id="LineChart"></canvas>
+        </div>
+      </div>
+
+     
+
+
+
+  <!-- bootstrap -->
+  <script src="JS1/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

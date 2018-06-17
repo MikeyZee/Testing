@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <title>Field Day</title>
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/fullcalendar.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+  <link href="css/line-icons.css" rel="stylesheet">
+  <link href="css/elegant-icons-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.html" class="logo">Field <span class="lite">Day</span></a>
+      <!--logo end-->
+      <div>
+        <img class="logo_header" src="img/FD.png">
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="sub-menu">
+            <a class="" href="index.html">
+              <i class="icon_house_alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class= "" href="Altitude.html">
+              <i class=""></i>
+              <span>Altitude</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class="" href="Speed.html">
+              <img src="https://image.ibb.co/exFPNw/Speedometer.png" alt="Speedometer" border="0"width="26px" height="26px" > 
+              <span>Speed</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a href="GPS.html">
+              <i class="icon_genius"></i>
+              <span>GPS</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a class="" href="Acceleration.html">
+              <i class="icon_piechart"></i>
+              <span>Acceleration</span>
+            </a>
+          </li>
+
+          <li class="sub-menu">
+            <a href="Gyro.html">
+               <i class="icon_table"></i>
+               <span>Gyro</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="FieldDay_Info.html" class="">
+              <i class="icon_documents_alt"></i>
+              <span>FieldDay Explained</span>
+            </a>
+          </li>
+
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+          <!--overview start-->
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="page-header"><i class="fa fa-laptop"></i>FieldDay Explained</h3>
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                <li><i class="fa fa-laptop"></i>FieldDay Explained</li>
+              </ol>
+            </div>
+          </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-lg-8">
+          
+          <h1>Betaflight Configuration</h1>
+          <h4>BlackBox logging settings</h4>
+          <p>Betaflight's blackbox logging system works effciently with FieldDay's algorthms.
+            Many modern flight controllers have integrated barometers, GPS chips, gyroscopes and other sensors 
+            which can be utilised by FieldDay. Betaflight has produced a software which allows some 
+            interpretation of blackbox data and this software is required for FieldDay to function 
+            properly. 
+            This software - (Blackbox decoding tool) can be found below.
+            <br>
+            <br>
+            <h4>Betaflight Tools Download Mac & Windows</h4>
+            <a href="https://github.com/cleanflight/blackbox-tools/releases/download/v0.4.3/blackbox-tools-0.4.3-macosx.tar.gz"><img class="blackbox-decode-download-mac" src="img/OSX Icon.png"></a>
+            <a href="https://github.com/cleanflight/blackbox-tools/releases/download/v0.4.3/blackbox-tools-0.4.3-windows.zip"><img class="blackbox-decode-download-windows" src="img/Windows Icon.png"></a>
+            <br>
+            <br>
+            A tutorial demonstrating how to use the decoding tool to generate csv files for use within 
+            FieldDay can be found on the right handside of the page.
+            <br>
+            With further iterations, an integrated batch script will fill in all values after the CSV file 
+            is uploaded to FieldDay's servers. For the moment, manual input is required.
+          </p>
+          
+        </div>
+        <div class="col-lg-4">
+          <h2>Where is this part stored</h2>
+        </div>
+      </div>
+      
+
+
+
+    </section>
+    <!--main content END-->
