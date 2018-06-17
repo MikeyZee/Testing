@@ -9057,8 +9057,8 @@ table.sliders tr td {
 }
 
 .logo_header {
-    height: 3.5%;
-    width: 3.5%;
+    height: 40px;
+    width: 40px;
 }
 
 #map_canvas { 
@@ -9075,4 +9075,10 @@ table.sliders tr td {
 .loginindex {
     color: #00DFFF;
     
+}
+
+#Manualpic {
+    width: 70%;
+    height: 85%;
+    margin-top: 4%
 }
