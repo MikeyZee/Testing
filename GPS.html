@@ -10,11 +10,9 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/fullcalendar.css">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet" />
-  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
   <link href="css/line-icons.css" rel="stylesheet">
   <link href="css/elegant-icons-style.css" rel="stylesheet">
 </head>
@@ -111,5 +109,51 @@
             </div>
           </div>
     </section>
+    <body onload="initialize()">
+        <div id="map_canvas"></div>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>   
+<script type="text/javascript">
+  function initialize() {
+    var map = new google.maps.Map(document.getElementById("map_canvas"), {
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    });
+    
+    $.ajax({
+     type: "GET",
+     url: "https://nofile.io/f/KronOurC5cF/run.gpx",
+     dataType: "xml",
+     success: function(xml) {
+       var points = [];
+       var bounds = new google.maps.LatLngBounds ();
+       $(xml).find("trkpt").each(function() {
+         var lat = $(this).attr("lat");
+         var lon = $(this).attr("lon");
+         var p = new google.maps.LatLng(lat, lon);
+         points.push(p);
+         bounds.extend(p);
+       });
 
-    <iframe src="http://www.dualsportmaps.com/embedMap.html?id=114379" title="Princeton West to Harrison to Summit" height="600" width="100%"></iframe>
+       var poly = new google.maps.Polyline({
+         // use your own style here
+         path: points,
+         strokeColor: "#FF00AA",
+         strokeOpacity: .7,
+         strokeWeight: 4
+       });
+       
+       poly.setMap(map);
+       
+       // fit bounds to track
+       map.fitBounds(bounds);
+     }
+    });
+  }
+</script>
+</head>
+
+
+
+
+  </body>
+  </html>
