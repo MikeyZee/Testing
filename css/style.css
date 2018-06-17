@@ -1116,7 +1116,7 @@ div[data-role="editor-toolbar"] {
 
 .page-header {
 
-  margin: 12px 0 20px;
+  margin: 12px 0 15px;
 
   border-bottom: none;
 
@@ -8956,6 +8956,7 @@ table.sliders tr td {
     border-radius: 40px;
     background-color: #3f4855;
     border: 10px solid #EEEEEE;
+    text-align: center;
 
 
 }
@@ -8973,6 +8974,7 @@ table.sliders tr td {
     border-radius: 40px;
     background-color: #3f4855;
     border: 10px solid #EEEEEE;
+    text-align: center;
 }
 
 .gps-dash {
@@ -8981,6 +8983,7 @@ table.sliders tr td {
     border-radius: 40px;
     background-color: #3f4855;
     border: 10px solid #EEEEEE;
+    text-align: center;
 }
 
 .module-dash-header {
@@ -8995,28 +8998,36 @@ table.sliders tr td {
 
 
 #altitudepic {
-    width: 85%;
-    height: 85%;
-    position: absolute;
-    right: 30px;
-    bottom: 10px;
+    width: 73%;
+    height: 73%;
 }
 
 #speedometerpic {
-    width: 68%;
-    height: 62%;
-    position: absolute;
-    left: 59px;
-    bottom: 74px;
+    width: 60%;
+    height: 90%;
+    margin-top: 2%;
+    
 }
 
 #GPSpic {
-    width: 68%;
-    height: 68%;
-    position: absolute;
-    left: 65px;
-    top: 70px;
+    width: 55%;
+    height: 55%;
+    margin-top: 3%;
 }
+
+#accelerationpic {
+    width: 60%;
+    height: 75%;
+    margin-top: 3%
+
+}
+#gyropic {
+    width: 60%;
+    height: 60%;
+    margin-top: 5.5%;
+
+}
+
 
 .Guest_login {
     font-size: 1vw;
@@ -9046,8 +9057,7 @@ table.sliders tr td {
 }
 
 .logo_header {
-    height: 5%;
-    width: 5%;
+    height: 3.5%;
+    width: 3.5%;
 }
-
 
