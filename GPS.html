@@ -15,9 +15,53 @@
 
   <link href="css/line-icons.css" rel="stylesheet">
   <link href="css/elegant-icons-style.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    function initialize() {
+      var map = new google.maps.Map(document.getElementById("map_canvas"), {
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    });
+    console.log("Before AJAX $$$$");
+    $.ajax({
+     type: "GET",
+     url: "/assets/Testergps.gpx",
+     dataType: "xml",
+     success: function(xml) {
+       console.log("Enter success function");
+       var points = [];
+       var bounds = new google.maps.LatLngBounds ();
+       $(xml).find("rtept").each(function() {
+        console.log("In loop :)");
+         var lat = $(this).attr("lat");
+         var lon = $(this).attr("lon");
+         console.log("Lat: "+ lat + " long: " + lon);
+         var p = new google.maps.LatLng(lat, lon);
+         points.push(p);
+         bounds.extend(p);
+       });
+
+       var poly = new google.maps.Polyline({
+         // use your own style here
+         path: points,
+         strokeColor: "#FF00AA",
+         strokeOpacity: .7,
+         strokeWeight: 4
+       });
+       
+       poly.setMap(map);
+       
+       // fit bounds to track
+       map.fitBounds(bounds);
+     }
+      });
+    }
+  </script>
 </head>
 
-<body>
+<body onload="initialize()">
     <!-- container section start -->
     <section id="container" class="">
   
@@ -109,51 +153,7 @@
             </div>
           </div>
     </section>
-    <body onload="initialize()">
-        <div id="map_canvas"></div>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>   
-<script type="text/javascript">
-  function initialize() {
-    var map = new google.maps.Map(document.getElementById("map_canvas"), {
-      mapTypeId: google.maps.MapTypeId.TERRAIN
-    });
-    
-    $.ajax({
-     type: "GET",
-     url: "https://nofile.io/f/KronOurC5cF/run.gpx",
-     dataType: "xml",
-     success: function(xml) {
-       var points = [];
-       var bounds = new google.maps.LatLngBounds ();
-       $(xml).find("trkpt").each(function() {
-         var lat = $(this).attr("lat");
-         var lon = $(this).attr("lon");
-         var p = new google.maps.LatLng(lat, lon);
-         points.push(p);
-         bounds.extend(p);
-       });
 
-       var poly = new google.maps.Polyline({
-         // use your own style here
-         path: points,
-         strokeColor: "#FF00AA",
-         strokeOpacity: .7,
-         strokeWeight: 4
-       });
-       
-       poly.setMap(map);
-       
-       // fit bounds to track
-       map.fitBounds(bounds);
-     }
-    });
-  }
-</script>
-</head>
-
-
-
-
+    <div id="map_canvas"></div>
   </body>
   </html>
