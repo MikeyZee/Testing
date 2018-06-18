@@ -5858,8 +5858,6 @@ ul.inbox-pagination li {
 
   animation: square 3s linear infinite;
 
-  -webkit-background-clip: text;
-
   color:transparent;  
 
   text-align:center;
@@ -7452,8 +7450,6 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 
     margin:5px 0px;
 
-    width: auto;
-
     color: #00a0df;
 
 }
@@ -7718,8 +7714,6 @@ table.sliders tr td {
 
     transition: left 0.25s ease-out;
 
-    -webkit-backface-visibility: hidden;
-
 }
 
 .has-switch > div.switch-off {
@@ -7802,7 +7796,7 @@ table.sliders tr td {
 
     transition: 0.25s ease-out;
 
-    -webkit-backface-visibility: hidden;
+   
 
 }
 
@@ -7867,8 +7861,6 @@ table.sliders tr td {
     -o-transition: 0.25s ease-out;
 
     transition: 0.25s ease-out;
-
-    -webkit-backface-visibility: hidden;
 
 }
 
@@ -7985,8 +7977,6 @@ table.sliders tr td {
     -o-transition: 0.14s linear;
 
     transition: 0.14s linear;
-
-    -webkit-backface-visibility: hidden;
 
 }
 
@@ -8119,8 +8109,6 @@ table.sliders tr td {
     -o-transition: 0.25s;
 
     transition: 0.25s;
-
-    -webkit-backface-visibility: hidden;
 
 }
 
@@ -8576,7 +8564,7 @@ table.sliders tr td {
 
     margin-left: -10px;
 
-    display: inline-block;
+    display: block;
 
     border: 5px solid rgba(255, 255, 255, 0.3);
 
@@ -8907,10 +8895,6 @@ table.sliders tr td {
 }
 
 
-
-#after-header {
-
-}
 
 .form-submit-button {
     color: #000;
