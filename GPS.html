@@ -21,6 +21,13 @@
 
   <script type="text/javascript">
     function initialize() {
+      var agree = prompt("The data uploaded to FieldDay is stored in a public SQL bucket for Beta purposes. FiledDay will not share this sha
+share your data with 3rd parties. Do you agree for FieldDay to store your data?", "I Agree");
+      if (agree != "I Agree") {
+        txt = "You are unauthorised to use the FieldDay Services";
+      } else { 
+         txt = "Welcome to FieldDay!";
+      }
       var map = new google.maps.Map(document.getElementById("map_canvas"), {
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
