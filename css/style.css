@@ -8587,141 +8587,6 @@ table.sliders tr td {
 }
 
 
-
-.twt-feed {
-
-    border-radius: 4px 4px 0 0;
-
-    -webkit-border-radius: 4px 4px 0 0;
-
-    color: #FFFFFF;
-
-    padding: 10px;
-
-    position: relative;
-
-    text-align: center;
-
-}
-
-
-
-.twt-feed.blue-bg {
-
-    background: #00a0df;
-
-}
-
-
-
-.twt-feed h1 {
-
-    font-size: 22px;
-
-    font-weight: 300;
-
-    margin-bottom: 5px;
-
-}
-
-
-
-.twt-feed a  {
-
-    border: 8px solid #fff;
-
-    border-radius: 50%;
-
-    -webit-border-radius: 50%;
-
-    display: inline-block;
-
-    margin-bottom: -55px;
-
-}
-
-
-
-.twt-feed a img {
-
-    height: 112px;
-
-    width: 112px;
-
-    border-radius: 50%;
-
-    -webit-border-radius: 50%;
-
-}
-
-
-
-.twt-category {
-
-    display: inline-block;
-
-    margin-bottom: 11px;
-
-    margin-top: 55px;
-
-    width: 100%;
-
-}
-
-.profile-widget-data{
-
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    margin-top: 15px;
-
-    width: 100%;    
-
-}
-
-
-
-.twt-category ul li, .profile-widget-data ul li,.profile-nav ul > li{
-
-    color: #89817f;
-
-    font-size: 13px;
-
-    border-bottom: none;
-
-}
-
-
-
-.twt-category h5  {
-
-    font-size: 20px;
-
-    font-weight: 300;
-
-}
-
-
-
-.twt-write .t-text-area {
-
-    border: 1px solid #eeeeee;
-
-    border-radius: 0;
-
-}
-
-
-
-.twt-footer {
-
-    padding: 10px 15px;
-
-}
-
-
-
 .btn-space {
 
     padding-left: 11.6%;
@@ -9066,3 +8931,16 @@ table.sliders tr td {
     height: 85%;
     margin-top: 4%
 }
+
+#GPXtype {
+    
+    border-radius: 4px;
+    width: 12%;
+    padding: 6px;
+}
+
+#GPXtype:focus {
+    border: 2px solid #00DFFF;
+
+}
+

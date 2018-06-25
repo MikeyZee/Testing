@@ -1,0 +1,14 @@
+{
+  "name": "fieldday",
+  "version": "1.0.0",
+  "description": "Dont use this ",
+  "main": "bootstrap.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Zeee",
+  "license": "ISC",
+  "dependencies": {
+    "uppy": "^0.25.5"
+  }
+}

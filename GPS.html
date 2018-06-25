@@ -12,10 +12,10 @@
   <link href="css/bootstrap-theme.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet" />
-
+  <link href="https://transloadit.edgly.net/releases/uppy/v0.25.5/dist/uppy.min.css" rel="stylesheet">
   <link href="css/line-icons.css" rel="stylesheet">
   <link href="css/elegant-icons-style.css" rel="stylesheet">
-
+<!--
   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDTCahEGAv5-O-oTjcI6JSU1mRvtJcINEg"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
@@ -33,7 +33,7 @@
        console.log("Enter success function");
        var points = [];
        var bounds = new google.maps.LatLngBounds ();
-       $(xml).find("rtept").each(function() {
+       $(xml).find("rtept").each(function() {            Need to Make this document.getelementbyID GPStype from drop down) 
         console.log("In loop :)");
          var lat = $(this).attr("lat");
          var lon = $(this).attr("lon");
@@ -60,7 +60,7 @@
     }
   </script>
 </head>
-
+-->
 <body onload="initialize()">
     <!-- container section start -->
     <section id="container" class="">
@@ -138,7 +138,6 @@
         </div>
       </aside>
       <!--sidebar end-->
-
       <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
@@ -153,7 +152,31 @@
             </div>
           </div>
     </section>
+    <button id="uppyModalOpener">Upload File</button>
+    <div>
+       GPX File type (Found in the early lines of your raw GPX file) <br>
+        <select id="GPXtype" >
+            <option value="rtept">rtept</option>
+            <option value="rtkpt">rtkpt</option>
+          </select> 
 
+    </div>
     <div id="map_canvas"></div>
+    
+    
+    <script src="https://transloadit.edgly.net/releases/uppy/v0.25.5/dist/uppy.min.js"></script>
+    <script>
+      
+      const uppy = Uppy.Core({debug: true, autoProceed: false})
+        .use(Uppy.Dashboard, {
+          trigger: '#uppyModalOpener' })
+        .use(Uppy.Webcam, {target: Uppy.Dashboard})
+        .use(Uppy.Tus, { endpoint: 'https://master.tus.io/files/' })
+
+      uppy.on('success', (fileCount) => {
+        console.log(`${fileCount} files uploaded`)
+
+      })
+    </script>
   </body>
   </html>
