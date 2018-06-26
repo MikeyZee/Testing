@@ -18,16 +18,16 @@
 <!--
   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDTCahEGAv5-O-oTjcI6JSU1mRvtJcINEg"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-
+-->
   <script type="text/javascript">
     function initialize() {
-      var agree = prompt("The data uploaded to FieldDay is stored in a public SQL bucket for Beta purposes. FiledDay will not share this sha
-share your data with 3rd parties. Do you agree for FieldDay to store your data?", "I Agree");
-      if (agree != "I Agree") {
-        txt = "You are unauthorised to use the FieldDay Services";
+      var agree = prompt("The data uploaded to FieldDay is stored in a public SQL bucket for Beta purposes. FieldDay is not resposible for the privacy of the data you upload. If you agree to these terms, please type, 'I agree' below");
+      if (agree == "I Agree" || agree =="I agree" || agree=="i agree" || agree=="i Agree") {
+        window.alert("Welcome to FieldDay!");
       } else { 
-         txt = "Welcome to FieldDay!";
+        window.alert("You are unauthorised to use FieldDay services");
       }
+      /*
       var map = new google.maps.Map(document.getElementById("map_canvas"), {
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
@@ -40,7 +40,7 @@ share your data with 3rd parties. Do you agree for FieldDay to store your data?"
        console.log("Enter success function");
        var points = [];
        var bounds = new google.maps.LatLngBounds ();
-       $(xml).find("rtept").each(function() {            Need to Make this document.getelementbyID GPStype from drop down) 
+       $(xml).find("rtept").each(function() {             
         console.log("In loop :)");
          var lat = $(this).attr("lat");
          var lon = $(this).attr("lon");
@@ -63,11 +63,11 @@ share your data with 3rd parties. Do you agree for FieldDay to store your data?"
        // fit bounds to track
        map.fitBounds(bounds);
      }
-      });
+      }); */
     }
   </script>
 </head>
--->
+
 <body onload="initialize()">
     <!-- container section start -->
     <section id="container" class="">
