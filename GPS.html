@@ -21,6 +21,12 @@
 
   <script type="text/javascript">
     function initialize() {
+      var agree = prompt("The data uploaded to FieldDay is stored in a public SQL bucket for Beta purposes. FieldDay is not resposible for the privacy of the data you upload. If you agree to these terms, please type, 'I agree' below");
+      if (agree == "I Agree" || agree =="I agree" || agree=="i agree" || agree=="i Agree") {
+        window.alert("Welcome to FieldDay!");
+      } else { 
+        window.alert("You are unauthorised to use FieldDay services");
+      }
       var map = new google.maps.Map(document.getElementById("map_canvas"), {
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
@@ -192,4 +198,5 @@
       })
     </script>
   </body>
-  </html>
+
+</html>
