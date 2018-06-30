@@ -16,17 +16,11 @@
   <link href="css/line-icons.css" rel="stylesheet">
   <link href="css/elegant-icons-style.css" rel="stylesheet">
 
-  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDTCahEGAv5-O-oTjcI6JSU1mRvtJcINEg"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTCahEGAv5-O-oTjcI6JSU1mRvtJcINEg"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
   <script type="text/javascript">
     function initialize() {
-      var agree = prompt("The data uploaded to FieldDay is stored in a public SQL bucket for Beta purposes. FieldDay is not resposible for the privacy of the data you upload. If you agree to these terms, please type, 'I agree' below");
-      if (agree == "I Agree" || agree =="I agree" || agree=="i agree" || agree=="i Agree") {
-        window.alert("Welcome to FieldDay!");
-      } else { 
-        window.alert("You are unauthorised to use FieldDay services");
-      }
       var map = new google.maps.Map(document.getElementById("map_canvas"), {
       mapTypeId: google.maps.MapTypeId.TERRAIN
     });
@@ -71,20 +65,25 @@
     <!-- container section start -->
     <section id="container" class="">
   
+  <!--header start-->
+  <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
   
-      <header class="header dark-bg">
-        <div class="toggle-nav">
-          <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
-        </div>
-  
-        <!--logo start-->
-        <a href="index.html" class="logo">Field <span class="lite">Day</span></a>
-        <!--logo end-->
-        <div>
+      <!--logo start-->
+      <div class="row">
+        <div class="col-lg-6 nopaddingcol">
+          <a href="index.html" class="logo">Field <span class="lite">Day</span></a> 
           <img class="logo_header" src="img/FD.png">
         </div>
-      </header>
-      <!--header end-->
+        <div class="col-lg-offset-11 loginbtindex">
+          <a class= "btn btn-primary" href="login.html">Login</a>
+        </div> 
+      </div>
+    </header>
+    
+    <!--header end-->
   
       <!--sidebar start-->
       <aside>

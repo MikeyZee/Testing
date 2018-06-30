@@ -8944,3 +8944,11 @@ table.sliders tr td {
 
 }
 
+.loginbtindex {
+    padding-top: 0.75%;
+}
+
+.nopaddingcol {
+    padding-left: 0px;
+    padding-right: 0px;
+}
