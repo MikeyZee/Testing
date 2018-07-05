@@ -28,11 +28,11 @@
     console.log("Before AJAX $$$$");
     $.ajax({
      type: "GET",
-     url: "/assets/Testergps.gpx",
+     url: "/assets/Testergps.gpx", // Use of stub here to allow further lines of code to be developed 
      dataType: "xml",
      success: function(xml) {
        console.log("Enter success function");
-       var points = [];
+       var points = [];    // array of points is created and this array is then plotted 
        var bounds = new google.maps.LatLngBounds ();
        $(xml).find("rtept").each(function() {           
         console.log("In loop :)");
@@ -45,7 +45,7 @@
        });
 
        var poly = new google.maps.Polyline({
-         // use your own style here
+         // Styling of the line including colour and thickness
          path: points,
          strokeColor: "#FF00AA",
          strokeOpacity: .7,
@@ -62,7 +62,7 @@
   </script>
 </head>
 
-<body onload="initialize()">
+<body onload="initialize()"> <!-- used to ensure that the function will run on pageload-->
     <!-- container section start -->
     <section id="container" class="">
   
@@ -161,8 +161,9 @@
     <div>
        GPX File type (Found in the early lines of your raw GPX file) <br>
         <select id="GPXtype" >
-            <option value="rtept">rtept</option>
+            <option value="rtept">rtept</option> <!--3 of the most popular GPX file formats that will be supported-->
             <option value="rtkpt">rtkpt</option>
+            <option value="tkrpt">tkrpt</option>
           </select> 
 
     </div>
@@ -179,8 +180,8 @@
         autoProceed: false,
         id: 'uppy',
         restrictions: {
-          maxFileSize: 1000000,
-          maxNumberOfFiles: 1,
+          maxFileSize: 1000000, // used to ensure that, in later iterations, s3 storage is not 'trolled'
+          maxNumberOfFiles: 1, // only allowing 1 file will ensure the GPS function will work properly
           minNumberOfFiles: 1,
           allowedFileTypes: ['.gpx', '.png']
           
